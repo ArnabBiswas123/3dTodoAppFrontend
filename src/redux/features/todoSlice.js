@@ -4,7 +4,7 @@ export const fetchTodos = createAsyncThunk(
   "todos/fetchTodos",
   async (args, { rejectWithValue }) => {
     try {
-      const response = await fetch("http://localhost:5000/api/v1/todo/alltodo");
+      const response = await fetch("https://todobackend-bici.onrender.com/api/v1/todo/alltodo");
       const result = await response.json();
       return result;
     } catch (error) {
@@ -18,7 +18,7 @@ export const addTodos = createAsyncThunk(
   async (todo, { rejectWithValue }) => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/v1/todo/addtodo",
+        "https://todobackend-bici.onrender.com/api/v1/todo/addtodo",
         {
           method: "POST",
           headers: {
@@ -44,7 +44,7 @@ export const deleteTodos = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/v1/todo/deletetodo/${id}`,
+        `https://todobackend-bici.onrender.com/api/v1/todo/deletetodo/${id}`,
         { method: "DELETE" }
       );
 
@@ -62,7 +62,7 @@ export const completeTodos = createAsyncThunk(
   async ({ id, completed }, { rejectWithValue }) => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/v1/todo/completetodo",
+        "https://todobackend-bici.onrender.com/api/v1/todo/completetodo",
         {
           method: "PUT",
           headers: {
@@ -87,7 +87,7 @@ export const editTodos = createAsyncThunk(
   async ({ id, name }, { rejectWithValue }) => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/v1/todo/edittodo",
+        "https://todobackend-bici.onrender.com/api/v1/todo/edittodo",
         {
           method: "PUT",
           headers: {

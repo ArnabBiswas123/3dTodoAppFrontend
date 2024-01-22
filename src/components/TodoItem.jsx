@@ -26,10 +26,10 @@ const TodoItem = (props) => {
     <li className="flex flex-col sm:flex-row sm:items-center justify-between border-b-2 py-2 gap-4">
       {!edit ? (
         <div className="flex items-center">
-          <span className="mr-4 text-gray-500">{props.index + 1}.</span>
+          <span className="mr-4 text-black-500">{props.index + 1}.</span>
           <span
             className={`mr-4 ${
-              props.items.iscompleted ? "line-through text-gray-500" : ""
+              props.items.iscompleted ? "line-through text-black-500" : ""
             }`}
           >
             {props.items.name}

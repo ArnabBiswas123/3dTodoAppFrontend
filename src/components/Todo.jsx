@@ -21,13 +21,14 @@ export default function Todo() {
 
   const getUser = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/login/sucess", {
+      const response = await axios.get("https://todobackend-bici.onrender.com/login/sucess", {
         withCredentials: true,
       });
       // console.log("response", response)
       setUserdata(response.data.user);
     } catch (error) {
-      navigate('/')
+      console.log(error)
+      // navigate('/')          
     }
   };
 
@@ -46,7 +47,7 @@ export default function Todo() {
   };
 
   const logout = () => {
-    window.open("http://localhost:5000/logout", "_self");
+    window.open("https://todobackend-bici.onrender.com/logout", "_self");
   };
 
   const filteredData = data.filter((todo) => {

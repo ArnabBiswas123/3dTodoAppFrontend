@@ -2,7 +2,7 @@
 
 const Login = () => {
   const loginwithgoogle = () => {
-    window.open("http://localhost:5000/auth/google/callback", "_self");
+    window.open("https://todobackend-bici.onrender.com/auth/google/callback", "_self");
   };
 
   return (
