@@ -108,14 +108,14 @@ export default function Todo() {
 
       <div className="max-w-full md:max-w-4xl mx-auto mt-36 p-2 bg-orange-100 bg-opacity-60 rounded">
         <h2 className="mt-3 mb-6 text-2xl font-bold text-center uppercase">
-          Personal TODO APP
+        PERSONAL ISSUE TRACKER
         </h2>
         <div className="flex items-center mb-4">
           <input
             id="addTodoInput"
             className="flex-grow p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500"
             type="text"
-            placeholder="Add Todo"
+            placeholder="Add Issue"
             onChange={(e) => setTodo(e.target.value)}
           />
           <button
