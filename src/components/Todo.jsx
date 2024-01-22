@@ -82,6 +82,7 @@ export default function Todo() {
               <li>
                 <NavLink to="/">Home</NavLink>
               </li>
+              <li onClick={logout}>Logout</li>
               {Object?.keys(userdata)?.length > 0 ? (
                 <>
                   <li style={{ color: "black", fontWeight: "bold" }}>
